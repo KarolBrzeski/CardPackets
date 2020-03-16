@@ -1,0 +1,133 @@
+body {
+    background-color: #e2f3f5;
+    font-family: 'Roboto', sans-serif;
+}
+
+.packets {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.packets .header-packets h3 {
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    font-size: 20pt;
+    font-weight: 500;
+}
+
+.packets .main-title-packets {
+    color: #185ba4;
+    text-align: center;
+    font-size: 20pt;
+}
+
+.packets .wrapper-packets {
+    position: relative;
+    perspective: 40em;
+    display: grid;
+    transform-style: preserve-3d;
+    transform: translateX(-150px);
+    margin-top: 50px;
+}
+
+.packets .packets-left {
+    margin-right: 50px;
+}
+
+.packets .packets-right {
+    margin-left: 50px;
+}
+
+.packets .card-packets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 1;
+    height: 500px;
+    width: 400px;
+    transform: translateX(-18px) rotateY(4deg) rotateX(5deg);
+    background: #002651;
+    padding: 15px;
+    font-size: 15pt;
+    box-shadow: 0 10px 30px -3px rgba(0, 0, 0, 0.1);
+}
+
+.packets .title-packets, .packets span {
+    display: block;
+    text-align: center;
+    cursor: default;
+    color: rgb(216, 216, 216);
+}
+
+.packets .title-packets {
+    font-size: 20pt;
+    font-weight: 900;
+}
+
+.packets span {
+    font-size: 16pt;
+    padding-bottom: 30px;
+}
+
+.packets .button--packets {
+    width: 250px;
+    height: 50px;
+    background: #ff304f;
+    font-size: 12pt;
+    line-height: 50px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(216, 216, 216);
+    font-weight: bold;
+}
+
+.packets .button--packets:hover {
+    color: rgb(216, 216, 216);
+    background: #ff304f;
+}
+
+.packets .button--packets:active {
+    transform: scale(0.95);
+    background: #ff304f;
+    color: rgb(216, 216, 216);
+}
+
+.packets .button--packets:focus {
+    outline: none;
+    text-decoration: none;
+    background: #ff304f;
+    color: rgb(216, 216, 216);
+}
+
+.packets .wrapper-packets:before {
+    grid-area: 1;
+    content: "";
+    height: 100%;
+    width: 425px;
+    margin-top: calc(-1 * 3px);
+    margin-left: calc(-1 * 3px);
+    background: transparent;
+    transform: translateX(370px) rotateY(-8deg) rotateX(0deg) scale(1);
+    cursor: default;
+    border: 3px solid #43434c;
+    box-sizing: content-box;
+}
+
+.packets .wrapper-packets>.card-packets, .packets .wrapper-packets:before {
+    will-change: transform;
+    transition: 0.5s transform cubic-bezier(0.25, 0.5, 0.5, 1);
+}
+
+.packets .wrapper-packets:hover .card-packets {
+    transform: none;
+}
+
+.packets .wrapper-packets:hover:before {
+    transform: translateX(430px) rotateY(0deg) rotateX(0deg) scale(1);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+}
